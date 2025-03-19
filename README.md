@@ -66,3 +66,11 @@ print(" -> ".join(i.ad for i in rota))
 rota, sure = metro.en_hizli_rota_bul("A", "C")
 
 print(f"En hızlı rota ({sure} dakika):", " -> ".join(i.ad for i in rota))
+
+# 🔍 Geliştirme Fikirleri
+
+Görselleştirme eklenmesi (Grafikleriyle metro haritası çizilebilir)
+
+Gerçek dünya verileriyle genişletme (Örnek olarak İstanbul veya Ankara metrosu)
+
+Trafik yoğunluğu ve bekleme süreleri ekleme
