@@ -1,8 +1,8 @@
-Sürücüsüz Metro Simülasyonu (Rota Optimizasyonu)
+# Sürücüsüz Metro Simülasyonu (Rota Optimizasyonu)
 
 Bu proje, bir metro ağında en hızlı ve en az aktarmalı rotaları bulmak için BFS (Breadth-First Search) ve A* benzeri algoritmalar** kullanarak bir simülasyon sunar.
 
-🚀 Proje Amacı
+# 🚀 Proje Amacı
 
 Bu projede aşağıdaki hedeflere ulaşılması amaçlanmıştır:
 
@@ -14,7 +14,7 @@ A* algoritmasına benzer bir yöntemle en hızlı rotayı bulmak**
 
 Gerçek dünya problemlerini algoritmalarla çözmek
 
-🛠 Kullanılan Teknolojiler ve Kütüphaneler
+# 🛠 Kullanılan Teknolojiler ve Kütüphaneler
 
 Python: Genel programlama dili
 
@@ -24,7 +24,7 @@ heapq: Öncelik kuyruğu ile en hızlı rotayı bulma
 
 defaultdict: Hatları organize etmek için kullanılan veri yapısı
 
-📌 Algoritmaların Çalışma Mantığı
+# 📌 Algoritmaların Çalışma Mantığı
 
 1️⃣ BFS (En Az Aktarmalı Rota)
 
@@ -42,29 +42,27 @@ Ziyaret edilen istasyonlar ve süreler takip edilir.
 
 Her adımda en hızlı ulaşım süresi güncellenir.
 
-📊 Örnek Kullanım
-
-# Metro ağı oluşturuluyor
+# 📊 Örnek Kullanım
+# Metro Ağı Oluşturuluyor
 metro = MetroAgi()
+
 metro.istasyon_ekle("A", "Kızılay", "Kırmızı")
+
 metro.istasyon_ekle("B", "Ulus", "Kırmızı")
+
 metro.istasyon_ekle("C", "Sıhhiye", "Mavi")
+
 metro.baglanti_ekle("A", "B", 5)
+
 metro.baglanti_ekle("A", "C", 3)
 
-# En az aktarmalı rota
+# En Az Aktarmalı Rota
 rota = metro.en_az_aktarma_bul("A", "C")
+
 print(" -> ".join(i.ad for i in rota))
 
-# En hızlı rota
+
+# En Hızlı Rota
 rota, sure = metro.en_hizli_rota_bul("A", "C")
+
 print(f"En hızlı rota ({sure} dakika):", " -> ".join(i.ad for i in rota))
-
-
-🔍 Geliştirme Fikirleri
-
-Görselleştirme eklenmesi (Grafikleriyle metro haritası çizilebilir)
-
-Gerçek dünya verileriyle genişletme (Örnek olarak İstanbul veya Ankara metrosu)
-
-Trafik yoğunluğu ve bekleme süreleri ekleme
